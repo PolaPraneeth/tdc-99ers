@@ -29,6 +29,7 @@ Purpose: This configures the Uplink CLI to communicate with your Storj project, 
 Step 4: Create a Bucket
 Action: Create a new bucket to store your files.
 
+
 uplink mb sj://my-image-bucket
 
 
