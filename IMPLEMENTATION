@@ -1,0 +1,49 @@
+Step 1: Set Up Storj Account and Project
+Action: Sign up at Storj and create a new project in the Storj Dashboard.
+Purpose: Establishes your user space on Storj to manage buckets and access.
+
+
+Step 2: Install Uplink CLI
+Action: Download and install the Uplink CLI from the Storj GitHub repository or use package managers.
+
+curl -L https://github.com/storj/storj/releases/latest/download/uplink_darwin_amd64.zip -o uplink.zip
+unzip uplink.zip
+chmod +x uplink
+sudo mv uplink /usr/local/bin/uplink
+
+
+
+Purpose: The Uplink CLI is the tool for interacting with Storj directly from your command line.
+
+
+Step 3: Setup Uplink CLI with Your Project
+Action: Use the uplink setup command and follow the prompts to configure Uplink with your Storj project and API key.
+
+uplink setup
+
+
+
+Purpose: This configures the Uplink CLI to communicate with your Storj project, allowing you to manage buckets and files.
+
+
+Step 4: Create a Bucket
+Action: Create a new bucket to store your files.
+
+uplink mb sj://my-image-bucket
+
+
+
+Purpose: Buckets are containers for your files on Storj, similar to folders on your local machine but in the cloud.
+
+
+Step 5: Upload an Image
+Action: Upload an image file to your newly created bucket.
+
+uplink cp /path/to/your/image.jpg sj://my-image-bucket/IMG_5253.HEIC
+
+
+
+Step 6: Verify Upload
+
+uplink ls sj://my-image-bucket
+
